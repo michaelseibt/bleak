@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - 0.12.2
 
-script: bash ./deploy.sh
+script: gulp dist --production
 
 after_success:
   - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
