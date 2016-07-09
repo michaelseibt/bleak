@@ -10,7 +10,7 @@ fi
 
 rev=$(git rev-parse --short HEAD)
 
-cd stage/build
+cd build
 
 git init
 git config user.name "Michael Seibt"
