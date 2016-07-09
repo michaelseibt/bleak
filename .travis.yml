@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - stable
 
-script: bash ./ci/deploy.sh
+script: bash ./deploy.sh
 
 after_success:
   - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
