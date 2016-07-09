@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - 4.4.4
+  - stable
 
 script: gulp dist --production
 
@@ -9,13 +9,5 @@ after_success:
   - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
 
 env:
-  - CXX=g++-4.8
   global:
-    - secure: Qe4ADUMegqfsb7iYkq8wf6ibz3Ip9RxIDFkEfuYR9CHKoptNKW5FglEQ6o92PZU8wpOomohnWOrDz8/CroSROHkxUxv24XDojI+biraS9h0CdG02ETabfJiCUgIF41F7l6VVDIX/vEIGvj2Fy4XfZBvQdcXMNqH13+P5ZQtPZl0TvwfRFwzJtj3KnhEatjBeAKMa9AEg4Ew+ILbiZeiUU9CHEXrx+JFBu4GVkXyqDXRRaqKSMIuIrHeCwKSKR+RJJcWLOrXwpaQkUdYVuZiolIs/BK2bl07Ap75DTPU4XKHorO0omfE0pK/43mGaDwgOCgvsg2ES27e8QhfqVJ86Np7aekALzVtbyah0m41YledrLIOVnaz80oFWPNlmrMXZyjWJxShiHzHWEplkl1kvvw0PZpQqfzVNUEHY91ebG/PP2fOE1UhmlObVPEQtAJWTi/uFEJ0x/9J+jpn1pm31aT+YU5NyxJCy6YIsDssQNHs8rRcE1L/Wa+tNFOJKO1giuF1jKT4sItkT7LJN7cd2OKCOYrwGIaFg/0L2KCb44nOrj6fmvAbUJv8XdkN4awE9UiHC4AN/07AoVgcsZoJoZ2I+Ud0wLHm7mV406Byt/qS+7bkJ4DFdKxg0dhrroTzzVWnHOjpGQ+beBWqLyMF5kVRb3ajiKtJPHVEV8x8xDz8=
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
+    secure: Qe4ADUMegqfsb7iYkq8wf6ibz3Ip9RxIDFkEfuYR9CHKoptNKW5FglEQ6o92PZU8wpOomohnWOrDz8/CroSROHkxUxv24XDojI+biraS9h0CdG02ETabfJiCUgIF41F7l6VVDIX/vEIGvj2Fy4XfZBvQdcXMNqH13+P5ZQtPZl0TvwfRFwzJtj3KnhEatjBeAKMa9AEg4Ew+ILbiZeiUU9CHEXrx+JFBu4GVkXyqDXRRaqKSMIuIrHeCwKSKR+RJJcWLOrXwpaQkUdYVuZiolIs/BK2bl07Ap75DTPU4XKHorO0omfE0pK/43mGaDwgOCgvsg2ES27e8QhfqVJ86Np7aekALzVtbyah0m41YledrLIOVnaz80oFWPNlmrMXZyjWJxShiHzHWEplkl1kvvw0PZpQqfzVNUEHY91ebG/PP2fOE1UhmlObVPEQtAJWTi/uFEJ0x/9J+jpn1pm31aT+YU5NyxJCy6YIsDssQNHs8rRcE1L/Wa+tNFOJKO1giuF1jKT4sItkT7LJN7cd2OKCOYrwGIaFg/0L2KCb44nOrj6fmvAbUJv8XdkN4awE9UiHC4AN/07AoVgcsZoJoZ2I+Ud0wLHm7mV406Byt/qS+7bkJ4DFdKxg0dhrroTzzVWnHOjpGQ+beBWqLyMF5kVRb3ajiKtJPHVEV8x8xDz8=
