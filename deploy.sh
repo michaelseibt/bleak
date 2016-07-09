@@ -8,6 +8,8 @@ then
   exit 0
 fi
 
+echo "Deploying ..."
+
 rev=$(git rev-parse --short HEAD)
 
 cd build
